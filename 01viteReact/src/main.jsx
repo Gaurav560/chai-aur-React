@@ -16,17 +16,19 @@ const reactElement={
   },
   children:'click me to visit google'
 }
-
+const anotherElement3="gaurav is my name .and gaurav is my game";
 
 //naya reactElement hm react ke hisaab se banayenge
 const reactElement1=React.createElement(
 'a',
 {href:"https://google.com",target:'_blank'},
-"click me to visit goooogleeee"
+"click me to visit goooogleeee",
+anotherElement3
 
 
 
 )
+
 
 
 //jsx =javascript file mein html insert kar rahe hain
@@ -37,5 +39,8 @@ const anotherElement=(
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
- reactElement1
+ 
+reactElement1
+
+
 )

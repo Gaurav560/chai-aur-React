@@ -4,6 +4,10 @@ import Cricket from "./cricket.jsx"
 function App() {
   
 
+
+
+  const username="gauri,keep learning js and react.do not fear .keeep going";
+
   return (
     //you can return only one tag 
     //so we use fragment to enclose multiple tag in one tag
@@ -19,9 +23,20 @@ function App() {
     //saare method react and react dom dependencies mein hote hain
     //browser mein react dom use karte hain
     //mobile mein react native use karte hain 
+
+//how to use variables  of js file inside a html tag
+
+
+
+
+// {expression} -> isko bolte hain js ka evaluated expression
+//html tag ke andar exprssion ka final outcome likha hoga.
+//jo bhi evaluation karna hai ,wo html tag ke bahar kar ke aao.
+//aur html tag mein final outcome use karo 
+
     <>
    <Cricket />
-   <h1>gaurav</h1>
+   <h1>{username}</h1>
    <p>what is this</p>
    </>
   )
