@@ -1,5 +1,15 @@
 import React from 'react'
 import './App.css'
+
+
+const name11={
+  marginTop: '50px',
+  textAlign: 'center',
+  fontFamily: "'Noto Sans TC', sans-serif"
+}
+
+
+
 const App = () => {
 
   const name='Gaurav';
@@ -13,7 +23,7 @@ const App = () => {
   const link='https://telusko.com/';
   return (
     <>
-      <h1 className='name'>My name is:{name} and I am learning React </h1>
+      <h1 style={name11}>My name is:{name} and I am learning React </h1>
       <div className='he'>
 
       <img src={image1} alt="Image not found" className='k1' />
