@@ -1,22 +1,31 @@
 import React from 'react'
-
+import './App.css'
 const App = () => {
 
   const name='Gaurav';
-  const image1="https://images.pexels.com/photos/3532557/pexels-photo-3532557.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load";
-  
-  const image2="https://images.pexels.com/photos/2519833/pexels-photo-2519833.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load";
+  const image1="https://picsum.photos/200/300";
+  const image2="https://picsum.photos/250/300";
+  const image3="https://picsum.photos/255/300";
+  const image4="https://picsum.photos/260/300";
+
  
 
   const link='https://telusko.com/';
   return (
     <>
-      <h1 contentEditable="true">My name is:{name} </h1>
-      <img src={image1} alt="Image not found" />
+      <h1 className='name'>My name is:{name} </h1>
+      <div className='he'>
+
+      <img src={image1} alt="Image not found" className='k1' />
+      <img src={image3} alt="Image not found" className='k1' />
+      <img src={image4} alt="Image not found" className='k1'/>
+ 
       <a href={link}>
 
-      <img src={image2} alt="Image not found" />
+      <img src={image2} alt="Image not found" className='k1' />
       </a>
+      </div>
+      
     
     </>
   )
