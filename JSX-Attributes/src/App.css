@@ -4,6 +4,7 @@
 .he{
     margin-top: 50px;
 display:flexbox;
+justify-content: center;
 
 }
 .name{

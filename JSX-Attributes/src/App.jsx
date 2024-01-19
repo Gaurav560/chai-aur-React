@@ -13,7 +13,7 @@ const App = () => {
   const link='https://telusko.com/';
   return (
     <>
-      <h1 className='name'>My name is:{name} </h1>
+      <h1 className='name'>My name is:{name} and I am learning React </h1>
       <div className='he'>
 
       <img src={image1} alt="Image not found" className='k1' />
