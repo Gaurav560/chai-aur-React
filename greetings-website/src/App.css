@@ -1,0 +1,9 @@
+.t1{
+  display: flex;
+  justify-content: center;
+  margin-top: 19%;
+}
+.t2{
+  border-radius: 10px;
+  background-color: bisque;
+}
