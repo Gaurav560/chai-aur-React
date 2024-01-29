@@ -1,0 +1,118 @@
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px; /* Adjust the space between cards */
+  padding: 20px; /* Spacing around the cards container */
+}
+
+.card {
+  flex: 1 1 calc(50% - 40px); /* Each card takes up half the width minus the gap */
+  max-width: calc(50% - 40px); /* Maximum width for each card */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Optional: adds a shadow for depth */
+  transition: 0.3s; /* Optional: adds a transition effect on hover */
+  border-radius: 10px; /* Optional: rounds the corners of the card */
+}
+
+
+.card {
+  /* Existing styles */
+  position: relative;
+  overflow: hidden; /* To contain the pulse effect within the card */
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%; /* Large enough to cover the entire card */
+  height: 200%; /* Large enough to cover the entire card */
+  background-color: rgba(255, 255, 255, 0.1); /* A subtle white pulse; adjust color as needed */
+  border-radius: 50%;
+  z-index: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: scale(0);
+  pointer-events: none; /* Ensure the pulse doesn't interfere with clicking */
+}
+
+.card:hover::before {
+  opacity: 1;
+  transform: scale(0.5);
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly increase the size of the card */
+  z-index: 1;
+}
+
+.card_img, .cardInfo {
+  position: relative;
+  z-index: 1; /* Ensure the content stays on top of the pulse effect */
+}
+
+/* Optional: add a transition effect to the card scaling */
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3); /* Optional: changes the shadow on hover */
+}
+
+.card_img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px; /* Rounds the top-left corner */
+  border-top-right-radius: 10px; /* Rounds the top-right corner */
+}
+
+.cardInfo {
+  padding: 2px 16px; /* Adjust the padding inside the card */
+  background-color: black;
+  color: white;
+}
+
+.card_cateogry{
+  margin-left: 98px;
+}
+.card_title{
+  margin-left:25%;
+}
+.btn {
+  margin-bottom: 20px;
+  margin-left: 26%;
+  border-radius: 5px;
+  font-size: 1.2rem; /* Increases the text size inside the button */
+  padding: 10px 20px; /* Adds padding inside the button for a larger appearance */
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+.btn:hover{
+  
+    cursor: pointer;
+  
+}
+.h11 {
+  text-align: center;
+  color:black; /* Netflix red color */
+  font-size: 4rem; /* Very large font size */
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight:bolder;
+  line-height: 1.2; /* Ensures proper line spacing for large text */
+}
+
+@media screen and (max-width: 768px) {
+  .h11 {
+    font-size: 3rem; /* Smaller size for mobile devices */
+  }
+}
