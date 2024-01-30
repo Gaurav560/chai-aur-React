@@ -38,7 +38,7 @@ const Sdata=[
     img_src:"https://wallpaperset.com/w/full/9/b/f/33895.jpg",
     title:"A Neflix Original Series",
     sname:"GoodFellas",
-    link:"https://www.netflix.com/be-en/title/70002022"
+    link:"https://www.primevideo.com/detail/GoodFellas/0OJV3YLDWDLYY1AY84PYEWYY0Y"
      }
 ];
 

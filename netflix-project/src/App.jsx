@@ -2,20 +2,24 @@ import React from 'react';
 import Card from './Card';
 import './App.css';
 import Sdata from './Sdata';
+import Netflix from './Netflix';
+import Amazon from './Amazon';
 
+const favStreamingPlatform="";
+const CheckFavStreamingPlatform=()=>{
+if(favStreamingPlatform==='Netflix'){
+  return <Netflix/>
+}else{
+  return <Amazon/>
+}
+}
 const App = () => {
   return (
     <>
       <h1 className='h11'>Netflix's Best</h1>
-      {Sdata.map((val) => (
-        <Card 
-        key={val.key}
-          img_src={val.img_src}
-          title={val.title}
-          sname={val.sname}
-          link={val.link}
-        />
-      ))}
+      {/* rendering a function */}
+      <CheckFavStreamingPlatform/>
+
     </>
   )
 }
