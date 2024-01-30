@@ -5,21 +5,15 @@ import Sdata from './Sdata';
 import Netflix from './Netflix';
 import Amazon from './Amazon';
 
-const favStreamingPlatform="";
-const CheckFavStreamingPlatform=()=>{
-if(favStreamingPlatform==='Netflix'){
-  return <Netflix/>
-}else{
-  return <Amazon/>
-}
-}
+const favStreamingPlatform="netflix";
+
 const App = () => {
   return (
     <>
       <h1 className='h11'>Netflix's Best</h1>
-      {/* rendering a function */}
-      <CheckFavStreamingPlatform/>
-
+      {/* rendering a jsx page like Netflix or Amazon */}
+   
+{favStreamingPlatform==='netflix'?<Netflix/>:<Amazon/>}
     </>
   )
 }
