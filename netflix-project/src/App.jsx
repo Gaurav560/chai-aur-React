@@ -9,6 +9,7 @@ const App = () => {
       <h1 className='h11'>Netflix's Best</h1>
       {Sdata.map((val) => (
         <Card 
+        key={val.key}
           img_src={val.img_src}
           title={val.title}
           sname={val.sname}
