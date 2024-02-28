@@ -8,6 +8,9 @@ let[count,setCount]=useState(5);
   setCount(prevCount=>prevCount+1);
  
   }
+  const decNum=()=>{
+    setCount(prevCount=>prevCount-5);
+  }
 
 
 
@@ -15,7 +18,7 @@ let[count,setCount]=useState(5);
   return (
 <div>
 <h1>{count}</h1>
-<button onClick={incNum}>Click</button>
+<button onClick={incNum} onDoubleClick={decNum}>Click</button>
 </div>
   )
 }
