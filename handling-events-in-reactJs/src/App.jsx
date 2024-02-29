@@ -1,30 +1,25 @@
 import React, { useState } from 'react'
 
 const App = () => {
-  const purple="yellow";
-  const [bgColor,setBgColor] =useState(purple);
-  const [name,setName]=useState("Click Me");
 
+const purple='#8e44ad';
+const initialName = 'Click Me to Change Color'; 
+  const changedName = 'Oops! Color Changed.'; 
 
+const[bg,setBg]=useState(purple);
+const[name,setName]=useState(initialName);
 
-const bgChanges=()=>{
-let newBgColor="pink";
-setBgColor(newBgColor);
-setName("Oouch! :wolf");
-
-}
-
-const bgBack=()=>{
-
-  setBgColor(purple);
+const changeColor=()=>{
+  setBg(prevColor => prevColor === purple ? '#ccbd1d' : purple);
+  setName(prevName => prevName === initialName ? changedName: initialName);
 }
 
   return (
- <>
- <div style={{backgroundColor:bgColor}}>
-<button onClick={bgChanges} onDoubleClick={bgBack}>{name}</button>
- </div>
- </>
+    <>
+    <div style={{backgroundColor:bg}}>
+      <button onClick={changeColor}>{name}</button>
+    </div>
+    </>
   )
 }
 
