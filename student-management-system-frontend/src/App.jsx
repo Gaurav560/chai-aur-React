@@ -9,7 +9,7 @@ const App = () => {
 
   return (
     <>
-    <h1>Telusko Student Management System</h1>
+      <h1><a href="https://telusko.com/" style={{ color: 'inherit', textDecoration: 'none' }}>Telusko-</a>Student Management System</h1>
     <Router>
       <div className="app">
         <Routes>
