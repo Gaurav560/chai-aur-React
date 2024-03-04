@@ -1,35 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import ToDoLists from './ToDoLists';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [inputList, setInputList] = useState('');
+  const [items, setItems] = useState([]);
+
+  const addItem = (event) => {
+    setInputList(event.target.value);
+  };
+
+  const listOfItems = (event) => {
+    event.preventDefault();
+    setItems((oldItems) => {
+      return [...oldItems, inputList];
+    });
+    setInputList("");
+  };
+
+  const deleteItem = (id) => {
+    setItems((oldItems) => {
+      return oldItems.filter((arrElem, index) => {
+        return index !== id;
+      });
+    });
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='main_div'>
+        <div className='center_div'>
+          <br />
+          <h1>ToDo List</h1>
+          <br />
+          <form onSubmit={listOfItems}>
+            <input type="text" placeholder='Enter your to do item' onChange={addItem} value={inputList} />
+            <button type='submit'>+</button>
+          </form>
+          <ol>
+            {items.map((itemVal, index) => {
+              return (
+                <ToDoLists
+                  key={index}
+                  id={index}
+                  text={itemVal}
+                  onSelect={deleteItem}
+                />
+              );
+            })}
+          </ol>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
